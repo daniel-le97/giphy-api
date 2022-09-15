@@ -1,1 +1,17 @@
 /* BASIC STYLES HERE */
+.start-bar,
+.main-content {
+  max-height: 100vh;
+  overflow: auto;
+}
+.main-content {
+  width: 75vw;
+}
+
+.start-bar {
+  width: 25vw;
+}
+.form-card {
+  
+  /* transform: translateY(20vh); */
+}
