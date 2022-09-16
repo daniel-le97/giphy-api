@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { giftsService } from "../Services/GiftsService.js";
 import { sandboxGiftsService } from "../Services/SandboxGiftsService.js";
 import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
@@ -9,21 +10,23 @@ function _drawGifts() {
   setHTML("gifts", template);
 }
 
+// TODO why does my page not resubmit
 export class SandboxGiftsController {
   constructor() {
     this.getGifts();
+
     appState.on("sandboxGifts", _drawGifts);
   }
 
-  async openGift(id){
+  async openGift(id) {
     try {
-        await sandboxGiftsService.openGift(id)
-      } catch (error) {
-        console.error('[]',error)
-        Pop.error(error)
-      }
+      await sandboxGiftsService.openGift(id);
+    } catch (error) {
+      console.error("[]", error);
+      Pop.error(error);
+    }
   }
-  
+
   async getGifts() {
     try {
       await sandboxGiftsService.getGifts();

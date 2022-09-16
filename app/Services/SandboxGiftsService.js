@@ -18,7 +18,7 @@ class SandboxGiftsService {
     const res = await sandboxServer.get("/api/gifts");
     console.log(res.data, "hello from getGifts");
     appState.sandboxGifts = res.data.map((s) => new SandboxGift(s));
-    console.log(appState.sandboxGifts);
+    
   }
 }
 export const sandboxGiftsService = new SandboxGiftsService();

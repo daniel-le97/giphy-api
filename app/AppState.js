@@ -14,6 +14,9 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/SandboxGift').SandboxGift[]}*/
   sandboxGifts = [];
+
+  /** @type {import('./Models/Giphy').Giphy[]}*/
+  giphy = [];
 }
 
 export const appState = new Proxy(new AppState(), {

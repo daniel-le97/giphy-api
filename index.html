@@ -44,9 +44,10 @@
                 type="text"
                 name="tag"
                 class="form-control mt-5"
-                id="floatingInput"
-                placeholder="message" />
-              <label for="floatingInput" class="text-center">message</label>
+                id="tag-input"
+                placeholder="message"
+                value="" />
+              <label for="tag" class="text-center">message</label>
             </div>
             <div class="form px-3">
               <input
@@ -54,8 +55,9 @@
                 name="url"
                 class="form-control"
                 id="url-input"
-                placeholder="url" />
-              <label for="floatingPassword" class="text-center">url</label>
+                placeholder="url"
+                value="" />
+              <label for="url" class="text-center">url</label>
             </div>
             <div class="text-end border-bottom border-dark p-3">
               <button class="btn btn-primary" type="submit">submit</button>
@@ -64,12 +66,21 @@
           <!-- TODO -->
           <div class="form px-3 mt-5">
             <input
-              type="text"
+              type="search"
               class="form-control"
               id="giphy-input"
-              placeholder="url" 
-              onchange="app.giphysController.searchGifs()"/>
-            <label for="floatingPassword" class="text-center">url</label>
+              placeholder="url"
+              minlength="3"
+              value=""
+              onchange="app.giphysController.searchGifs()" />
+            <div id="giphy-list" class="bg-light mt-2 container">
+              <div class="row">
+                <div class="col-12 scrollBar">
+                  <!-- <img src="https://thiscatdoesnotexist.com"class="img-fluid p-2" alt=""> -->
+                </div>
+              </div>
+            </div>
+            <!-- <label for="floatingPassword" class="text-center">url</label> -->
           </div>
         </div>
       </section>

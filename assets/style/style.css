@@ -12,6 +12,10 @@
   width: 25vw;
 }
 .form-card {
-  
   /* transform: translateY(20vh); */
+}
+
+.scrollBar {
+  max-height: 100vh;
+  overflow: auto;
 }
